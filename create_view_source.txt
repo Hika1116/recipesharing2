@@ -1,0 +1,32 @@
+create view recipecardinfo as
+select 
+users.id as user_id
+from 
+recipes 
+left join users on recipes.user_id = users.id
+left join categorycontrol on recipes.id  = categorycontrol.recipe_id
+left join categorys on categorycontrol.category_id = categorys.id
+left join materialcontrol on recipes.id = materialcontrol.recipe_id
+left join materials on materialcontrol.material_id = materials.id
+
+-- materialinfo
+create view materialinfo as 
+select 
+materialcontrol.recipe_id as recipe_id,
+materialcontrol.id as materialcontrol_id,
+materialcontrol.amount as amount,
+materials.id as material_id,
+materials.material_name as material_name 
+from 
+materialcontrol
+inner join materials on materialcontrol.material_id = materials.id
+
+-- categoryinfo
+create view categoryinfo as 
+select 
+categorycontrol.recipe_id as recipe_id,
+categorycontrol.id as categorycontrol_id,
+categorys.id as category_id,
+categorys.category_name as category_name
+from categorycontrol
+inner join categorys on categorycontrol.category_id = categorys.id

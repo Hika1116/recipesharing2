@@ -1,0 +1,1 @@
+[07-Mar-2020 09:10:15 Asia/Tokyo] PHP Fatal error:  Cannot make static method Illuminate\Database\Eloquent\Model::boot() non static in class App\Models\CategoryInfo in /work/app/Models/CategoryInfo.php on line 10
