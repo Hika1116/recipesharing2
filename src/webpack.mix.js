@@ -7,4 +7,7 @@ mix.browserSync({ // ファイル監視設定
         })
         .js('resources/js/app.js', 'public/js').version()
         .js('resources/js/base.js', 'public/js').version()
-        .sass('resources/sass/base.scss', 'public/css/base.css').version();
+        .sass('resources/sass/base.scss', 'public/css/base.css').version()
+        .autoload({
+            jquery: ['$', 'window.jQuery']
+        });
