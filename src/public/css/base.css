@@ -10884,72 +10884,27 @@ a.text-dark:focus {
   }
 }
 
-header {
-  width: 100vw;
+.flex {
+  display: flex;
+}
+
+.navbar {
   background-color: #BCB5B5;
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
 }
 
-header h3 {
-  margin: 0;
-  padding: 0;
-  width: 60%;
-  display: flex;
-  align-items: center;
-}
-
-header h3 a {
-  padding: 0 16px;
-  display: block;
-  color: white;
-  text-decoration: none;
+.navbar h2 a {
   font-size: 2rem;
-}
-
-header h3 a:hover {
   color: white;
-  text-decoration: none;
-  opacity: 0.7;
 }
 
-header #nav-area {
+.navbar .collapse ul li a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.navbate {
   display: flex;
   justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-  width: 40%;
-}
-
-header #nav-area nav {
-  display: flex;
-  align-items: center;
-}
-
-header #nav-area nav ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-header #nav-area nav ul li {
-  color: white;
-  margin-left: 3rem;
-}
-
-header #nav-area nav ul li:last-child {
-  margin-right: 20px;
-}
-
-header #nav-area nav ul li a {
-  color: white;
-  text-decoration: underline;
-  font-size: 1.2rem;
-}
-
-header #nav-area nav ul li a:hover {
-  opacity: 0.7;
 }
 
 footer {
