@@ -20,87 +20,49 @@ $font-size-2: 1.2rem;
             font-size: $font-size-1;
             color: white;
         }
+        :hover {
+            opacity: 0.8;
+        }
     }
 
     .collapse {
-        ul{
+        .navbar-nav{
             li {
                 a {
                     font-size: $font-size-2;
                     color: white;
+                    text-decoration: none;
+                    border-bottom: 2px solid white;
+                    :hover {
+                        opacity: 0.5;
+                    }
                 }
             }
+
+            li:not(:first-child):after {
+                content: "";
+                position: absolute;
+                bottom: 22px;
+                display: inline-block;
+                width: 1.5px;
+                height: 25px;
+                transform: translateX(-50%);
+                background-color: white;
+                border-radius: 2px;
+            }
+            
         }
     }
 }
 
-.navbate {
-    display: flex;
-    justify-content: flex-end;
+
+.navbar-toggler {
+    border-color:$brawn;
+    background-color: $brawn;
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
 }
-
-
-// header
-// header{
-//     width: 100vw;
-//     background-color: $gray;
-//     display: flex;
-//     justify-content: flex-start;
-//     padding : 10px;
-//     h3 {
-//         margin: 0;
-//         padding: 0;
-//         width: 60%;
-//         display: flex;
-//         align-items: center;
-
-//         a {
-//             padding: 0 16px;
-//             display: block;
-//             color: white;
-//             text-decoration: none; 
-//             font-size: $font-size-1;
-
-//             &:hover{
-//                 color: white;
-//                 text-decoration: none; 
-//                 opacity: 0.7;
-//             }
-//         }
-//     }
-
-//     #nav-area {
-//         display: flex;
-//         justify-content: flex-end;
-//         margin: 0;
-//         padding: 0;
-//         width: 40%;
-//         nav {
-//             display: flex;
-//             align-items: center;
-//             ul {
-//                 padding: 0;
-//                 margin: 0;
-//                 display: flex;
-//                 li {
-//                     color: white;
-//                     margin-left: 3rem;
-//                     &:last-child {
-//                         margin-right: 20px;
-//                     }
-//                     a { 
-//                         color: white;
-//                         text-decoration: underline;
-//                         font-size: $font-size-2;
-//                         &:hover{
-//                             opacity: 0.7;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
 // footer
 footer {
